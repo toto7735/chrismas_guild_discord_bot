@@ -1,5 +1,4 @@
 import discord
-import os
 from discord.ext import tasks
 from discord.utils import get
 
@@ -126,6 +125,4 @@ async def edit_online_member_channel_name():
     online_member_channel = client.get_channel(833698038245359677)
     await online_member_channel.edit(name="⚽ 온라인 인원 : " + str(online_members) + "명")
 
-#access_token = os.environ["BOT_TOKEN"]
-#client.run(access_token)
-client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.BNgRtRVdB2E58madEkmK_q7F52k")
+client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.UmvRvLbaI3XcXDIK3pP-E3lYadE")
