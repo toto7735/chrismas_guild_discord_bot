@@ -21,18 +21,28 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if not isinstance(message.channel, discord.channel.DMChannel):
-        if message.channel.id == 833187276526845972:
+        if message.reference:
             if message.author == client.user:
                 return
-            if message.reference:
-                msg = await client.get_channel(message.channel.id).fetch_message(message.reference.message_id)
-                await message.channel.send(msg.embeds.description)
+            if message.channel.id == 833187276526845972:
+                try:
+                    msg = await client.get_channel(message.channel.id).fetch_message(message.reference.message_id)
+                    msg = str(msg.content)
+                    user = msg.replace("**님의 문의** (처리하려면 이 메시지에 답변)", "")
+                    user = user.replace("<", "")
+                    user = user.replace(">", "")
+                    user = user.replace("@", "")
+                    user = client.get_user(int(user))
+                    embed = discord.Embed(colour=discord.Colour.green(), title="답변이 왔습니다!", description=message.content)
+                    await user.send(embed=embed)
+                except Exception:
+                    print("")
         else:
             if message.author == client.user:
                 return
             if message.channel.id != 832982685944905771 and not await has_role("연산자", message.author, message):
+                print("TEST")
                 return
-
             if message.content.startswith('/도움말'):
                 await send_help_message(message)
             elif message.content.startswith('/문의'):
@@ -46,10 +56,22 @@ async def on_message(message):
                     return
                 await message.delete()
                 await message.channel.send(message.content[4:])
+            elif message.content.startswith('/채팅청소'):
+                if not await has_role("연산자", message.author, message):
+                    await message.channel.send("아쉽게도 권한이 없어서 안되겠네요. **연산자**")
+                    return
+                if len(message.content) < 7:
+                    await message.channel.send(embed=custom_help_message("채팅청소", "/채팅청소 [수]", "연산자", discord.Colour.green()))
+                    return
+                await message.delete()
+                i = int(message.content[5:])
+                history_message = await message.channel.history(limit=i).flatten()
+                for msg in history_message:
+                    await msg.delete()
     elif isinstance(message.channel, discord.channel.DMChannel):
         if message.author == client.user:
             return
-        embed = discord.Embed(colour=discord.Colour.green(), title="문의가 접수되었습니다!",
+        embed = discord.Embed(colour=discord.Colour.orange(), title="문의가 접수되었습니다!",
                               description="관리진이 확인 후 1주일 내로 처리됩니다.\n더 하실말씀이 있다면 계속 적어주세요.")
         await message.channel.send(embed=embed)
         admin_embed = discord.Embed(colour=discord.Colour.gold(), title="문의 내용", description=message.content)
@@ -126,5 +148,6 @@ async def edit_online_member_channel_name():
     online_member_channel = client.get_channel(833698038245359677)
     await online_member_channel.edit(name="⚽ 온라인 인원 : " + str(online_members) + "명")
 
-access_token = os.environ["BOT_TOKEN"]
-client.run(access_token)
+#access_token = os.environ["BOT_TOKEN"]
+#client.run(access_token)
+client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.MLLJ4ldPNHG-tsZJjB7qY70G9AA")
