@@ -128,4 +128,4 @@ async def edit_online_member_channel_name():
 
 #access_token = os.environ["BOT_TOKEN"]
 #client.run(access_token)
-client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.UmvRvLbaI3XcXDIK3pP-E3lYadE")
+client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.BNgRtRVdB2E58madEkmK_q7F52k")
