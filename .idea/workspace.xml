@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ab53467-09f9-44f4-b848-f0565a939253" name="Default Changelist" comment="First upload">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6ab53467-09f9-44f4-b848-f0565a939253" name="Default Changelist" comment="토큰관련 병경">
       <change beforePath="$PROJECT_DIR$/me/toto/main/bot_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/me/toto/main/bot_main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +100,7 @@
       <workItem from="1619092276771" duration="5408000" />
       <workItem from="1619159207900" duration="1113000" />
       <workItem from="1619160476447" duration="1862000" />
+      <workItem from="1619164898643" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="First upload">
       <created>1619160416652</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619160945478</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="토큰관련 병경">
+      <created>1619165106014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619165106014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,11 +150,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="First upload" />
+    <MESSAGE value="토큰관련 병경" />
+    <option name="LAST_COMMIT_MESSAGE" value="토큰관련 병경" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/___$bot.coverage" NAME="bot Coverage Results" MODIFIED="1619159211616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/me/toto/main" />
-    <SUITE FILE_PATH="coverage/___$bot_main.coverage" NAME="bot_main Coverage Results" MODIFIED="1619162223881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/me/toto/main" />
+    <SUITE FILE_PATH="coverage/___$bot_main.coverage" NAME="bot_main Coverage Results" MODIFIED="1619165224921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/me/toto/main" />
     <SUITE FILE_PATH="coverage/___$Bot.coverage" NAME="Bot Coverage Results" MODIFIED="1619094102205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/me/toto/main" />
   </component>
 </project>
