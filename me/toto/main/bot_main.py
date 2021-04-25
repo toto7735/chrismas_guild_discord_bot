@@ -41,7 +41,6 @@ async def on_message(message):
             if message.author == client.user:
                 return
             if message.channel.id != 832982685944905771 and not await has_role("연산자", message.author, message):
-                print("TEST")
                 return
             if message.content.startswith('/도움말'):
                 await send_help_message(message)
@@ -148,6 +147,5 @@ async def edit_online_member_channel_name():
     online_member_channel = client.get_channel(833698038245359677)
     await online_member_channel.edit(name="⚽ 온라인 인원 : " + str(online_members) + "명")
 
-#access_token = os.environ["BOT_TOKEN"]
-#client.run(access_token)
-client.run("ODMyOTc5MDk2NDUxNTQ3MTU2.YHrqPA.MLLJ4ldPNHG-tsZJjB7qY70G9AA")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
